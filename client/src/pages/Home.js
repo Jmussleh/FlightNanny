@@ -43,7 +43,7 @@ const Home = () => {
       </div>
       <div className="">
         <p>What is your budget?</p>
-        <input className="form-input" placeholder="$0.00" type="currentcy" />
+        <input className="form-input" placeholder="$0.00" type="currency" />
       </div>
       <div className="">
         <p>What flight are you on?</p>
