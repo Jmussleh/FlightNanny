@@ -17,14 +17,22 @@ type Children {
     first_name: String
     gaurdian: Passenger
 }
+
 type User {
-    _id: ID
-    firstname: String
-    lastname: String
-    phonenumber: String
-    username: String
-    email: String
-  }
+  _id: ID!
+  firstname: String!
+  lastname: String!
+  phonenumber: String!
+  username: String!
+  email: String!
+  status: Boolean!
+}
+
+type Auth {
+  token: ID!
+  user: User
+}
+
 
     type Query {
         passengers:[Passenger]
@@ -32,13 +40,17 @@ type User {
       }
     
     type Mutation {
-        createUser(
-            firstname: String!
-            lastname: String!
-            phonenumber: String!
-            username: String!
-            email: String!
-          ): User
+
+      addUser(
+        firstname: String!
+        lastname: String!
+        phonenumber: String!
+        username: String!
+        email: String!
+        password: String!
+        status: Boolean!
+      ): Auth
+
         addPassenger(
             first_name: String!, 
             last_name: String!, 
@@ -64,6 +76,8 @@ type User {
         email: String
         children: String
       ): Passenger
+
+      login(username: String!, password: String!): Auth
     }
 `;
 

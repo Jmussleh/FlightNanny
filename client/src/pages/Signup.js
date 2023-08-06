@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -14,15 +15,18 @@ const Signup = () => {
     username: "",
     email: "",
     password: "",
+    status: false,
   });
+
   const [addUser, { error, data }] = useMutation(ADD_USER);
 
   const handleChange = (event) => {
-    const { name, value } = event.target;
+    const { name, value, type } = event.target;
+    const fieldValue = type === "checkbox" ? event.target.checked : value;
 
     setFormState({
       ...formState,
-      [name]: value,
+      [name]: fieldValue,
     });
   };
 
@@ -54,6 +58,23 @@ const Signup = () => {
               </p>
             ) : (
               <form onSubmit={handleFormSubmit}>
+
+                <div className="card">
+
+                  <div class="form-inputs-container form-check">
+
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="flexRadioDefault"
+                      id="flexRadioDefault1"
+                    />
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      I’m a Nanny and I’m here to help
+                    </label>
+                  </div>
+                </div>
+
                 <div className="form-inputs-container">
                   <input
                     className="form-input"
@@ -74,6 +95,17 @@ const Signup = () => {
                     onChange={handleChange}
                   />
                 </div>
+                <div className="form-inputs-container">
+                  <input
+                    className="form-input"
+                    placeholder="Your username"
+                    name="username"
+                    type="text"
+                    value={formState.username}
+                    onChange={handleChange}
+                  />
+                </div>
+
                 <div className="form-inputs-container">
                   <input
                     className="form-input"
@@ -104,14 +136,32 @@ const Signup = () => {
                     onChange={handleChange}
                   />
                 </div>
-                <div>
-                  <button
-                    className="btn btn-block btn-primary"
-                    style={{ cursor: "pointer" }}
-                    type="submit"
-                  >
-                    Submit
-                  </button>
+
+                <div className="form-inputs-container form-check">
+                  <input
+                    className="form-check-input"
+                    type="checkbox"
+                    name="status"
+                    id="flexCheckDefault"
+                    checked={formState.status}
+                    onChange={handleChange}
+                  />
+                  <label className="form-check-label" htmlFor="flexCheckDefault">
+                    I’m a Nanny and I’m here to help
+                  </label>
+                </div>
+
+                <div className="ButtonContainer">
+                  <div className="form-inputs-container form-input form-check">
+                    <button
+                      className="btn btn-block btn-primary px-5"
+                      style={{ cursor: "pointer" }}
+                      type="button"
+                      onClick={handleFormSubmit}
+                    >
+                      Submit
+                    </button>
+                  </div>
                 </div>
               </form>
             )}
@@ -129,3 +179,5 @@ const Signup = () => {
 };
 
 export default Signup;
+
+
