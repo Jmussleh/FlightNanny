@@ -1,19 +1,38 @@
+:root{
+  --primaryColor:#F0EFF4 ;
+  --secondaryColor: #832161;
+  --accentColor: #DA4167;
+  --buttonColor: #FFB703;
+  --textColor: #000000;
+  --tertiaryColor: #3D2645;
+}
+
 .searchDiv{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-
 }
 .inputSearch{
   width: 300px;
+  background-color: rgb(244, 161, 192);
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  padding: 5px;
 }
 .searchBtn{
+  color: var(--primaryColor);
   margin-top: 12px;
   padding: 5px;
-  background-color: rgb(248, 123, 144);
+  background-color: var(--secondaryColor);
 }
+.searchBtn:hover{
+  color: var(--primaryColor);
+  background-color: var(--accentColor);
+}
+
+
 
 .liDiv {
   background-color: aliceblue;
