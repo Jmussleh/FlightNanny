@@ -11,8 +11,12 @@ For those with a passion for caring for kids, FlightNanny welcomes you to join a
 
 With FlightNanny, parents can finally enjoy their flights, knowing their little ones are in good hands. Say yes to hassle-free travel and make your family adventures memorable for all the right reasons. Sign up for FlightNanny today and experience a journey like never before!
 
+## Screenshot of Application
+<img title="FlightNanny" alt="Screenshot of FlightNanny" src="flight_nanny1 (1).jpg">
+
 ## Link to Live Site
 https://flightnanny3-447363e2e71e.herokuapp.com/ 
 ## Mentions
-
+N/A
 ## Contact Us
+Find our contact information on our GitHub Pages.
