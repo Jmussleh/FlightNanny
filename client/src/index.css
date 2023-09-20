@@ -51,6 +51,7 @@ button {
   border-radius: 10px;
 }
 .form-input{
+  background-color: rgb(244, 161, 192);
   color: white;
   border-radius: 10px;
   width: 50%;
@@ -116,7 +117,7 @@ button {
   font-size: 20px;
   color: var(--primaryColor);
   height: 4rem;
-  width: 6rem;
+  width: 8rem;
   padding: 20%;
 }
 /* Buttons on Navbar. Should have a hover effect. Currently doesn't work. */
@@ -217,4 +218,18 @@ button {
   }
 }
 
-  
+.navBtnDiv{
+width: 300px;
+}
+
+.searchBtn{
+  width: 300px;
+  color: var(--primaryColor);
+  margin-top: 12px;
+  padding: 5px;
+  background-color: var(--secondaryColor);
+}
+.searchBtn:hover{
+  color: var(--primaryColor);
+  background-color: var(--accentColor);
+}

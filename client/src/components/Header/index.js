@@ -36,14 +36,14 @@ const Header = () => {
                 </button>
               </>
             ) : (
-              <>
-                <li>
+              <div className="d-flex flex-row justify-content-center navBtnDiv">
+                <li className="">
                   <Link to="/login" className="navButton">Login</Link>
                 </li>
-                <li>
-                  <Link to="/signup" className="navButton">Sign Up</Link>
+                <li className=" ">
+                  <Link to="/signup" className="navButton"> Sign Up</Link>
                 </li>
-              </>
+              </div>
             )}
           </ul>
 
